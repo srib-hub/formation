@@ -3,23 +3,3 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import '~ngx-toastr/toastr.css';
-body {
-  animation:hue-anim 2s  alternate infinite;
-}
-body div,span {
-
-  perspective: 800px;
-  //transform:rotate3d(0,1,0,60deg);
-  animation:rotate-anim 2s;
-  //animation:hue-anim 2s  alternate infinite;
-}
-
-@keyframes hue-anim {
-  0%   { filter: hue-rotate(0deg);}
-  100% { filter: hue-rotate(100deg); }
-}
-
-@keyframes rotate-anim {
-  0%   { transform:rotate3d(1,1,1,0deg); zoom:1;}
-  100% { transform:rotate3d(1,1,1,360deg); zoom:50;}
-}

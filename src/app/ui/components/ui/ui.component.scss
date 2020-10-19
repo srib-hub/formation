@@ -13,13 +13,13 @@ header {
 
 
 main {
-  background: darken($light-color, 5);
+  background: white;
   min-height: calc(100vh - 65px);
   padding-top: 65px;
 }
 
 aside {
-  background: darken($light-color, 10);
+  background: white;
   width: 250px;
   min-height: 80vh;
   position: fixed;
@@ -59,7 +59,7 @@ aside {
 
 
 footer {
-  background: $light-color;
+  background: white;
 }
 
 @media (min-width: $md-breakpoint) {
