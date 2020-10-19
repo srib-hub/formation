@@ -7,7 +7,7 @@
       <input id="type" formControlName="typePresta" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="client">client</label>
+      <label i18n for="client">client</label>
       <input id="client" formControlName="client" type="text" class="form-control">
       <!-- <div class="alert alert-danger" *ngIf="form.get('client').invalid && form.get('client').touched">{{form.get('client').errors | json}}</div> -->
       <div appInvalidMessage invalidRow="client">
@@ -16,25 +16,25 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="nbJours">nbJours</label>
+      <label i18n for="nbJours">nbJours</label>
       <input id="nbJours" formControlName="nbJours" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="tjmHt">tjmHt</label>
+      <label i18n for="tjmHt">tjmHt</label>
       <input id="tjmHt" formControlName="tjmHt" type="text" class="form-control">
       <div class="alert alert-danger" *ngIf="form.get('tjmHt').invalid && form.get('tjmHt').touched"></div>
     </div>
     <div class="form-group">
-      <label for="tva">tva</label>
+      <label i18n for="tva">tva</label>
       <input id="tva" formControlName="tva" type="text" class="form-control">
     </div>
     <div class="form-group">
-      <label for="comment">comment</label>
+      <label i18n for="comment">comment</label>
       <input id="comment" formControlName="comment" type="text" class="form-control">
     </div>
 
     <div class="form-group">
-      <label for="state">Etat</label>
+      <label i18n for="state">Etat</label>
       <select id="state" formControlName="state" type="text" class="form-control">
         <option *ngFor="let state of states" [ngValue]="state">{{state}}</option>
       </select>
