@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, forkJoin, Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Order } from 'src/app/core/models/order';
 import { environment } from 'src/environments/environment';
@@ -69,10 +69,29 @@ export class OrdersService {
     )
   }
 
+  public getItem2ByClientName(name: string): Observable<Order[]> {
+    return this.http.get<Order[]>(`${this.urlApi}orders2?client=${name}`).pipe(
+      map((col) => {
+        return this.serializeOrders(col);
+      })
+    )
+  }
+
   public serializeOrders(collectionOrders: Order[]) {
     return collectionOrders.map((item) => {
       return new Order(item);
     })
+  }
+
+  public getAllItemByClientName(name: string): Observable<Order[]> {
+    return forkJoin([
+      this.getItemByClientName(name),
+      this.getItem2ByClientName(name)
+    ]).pipe(
+      map((cols) => {
+        return cols[0].concat(cols[1]);
+      })
+    );
   }
 
 }

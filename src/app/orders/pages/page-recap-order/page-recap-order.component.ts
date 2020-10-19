@@ -38,7 +38,7 @@ export class PageRecapOrderComponent implements OnInit {
       switchMap((param: ParamMap) => {
         return this.clientService.getItemById(param.get('id')).pipe(
           switchMap((client) => {
-            return this.orderService.getItemByClientName(client.name);
+            return this.orderService.getAllItemByClientName(client.name);
           })
         )
       })
