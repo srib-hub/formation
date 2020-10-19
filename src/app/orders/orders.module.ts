@@ -11,11 +11,12 @@ import { PageAddOrderComponent } from './pages/page-add-order/page-add-order.com
 import { PageListOrderComponent } from './pages/page-list-order/page-list-order.component';
 import { TotalPipe } from './pipes/total.pipe';
 import { PageEditOrderComponent } from './pages/page-edit-order/page-edit-order.component';
+import { PageRecapOrderComponent } from './pages/page-recap-order/page-recap-order.component';
 
 
 
 @NgModule({
-  declarations: [PageListOrderComponent, TotalPipe, FormOrderComponent, PageAddOrderComponent, PageEditOrderComponent],
+  declarations: [PageListOrderComponent, TotalPipe, FormOrderComponent, PageAddOrderComponent, PageEditOrderComponent, PageRecapOrderComponent],
   imports: [
     CommonModule,
     OrdersRoutingModule,

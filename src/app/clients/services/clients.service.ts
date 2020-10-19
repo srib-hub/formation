@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Client } from 'src/app/core/models/client';
+import { Order } from 'src/app/core/models/order';
 import { environment } from 'src/environments/environment';
 import { StateClient } from '../enums/state-client.enum';
 @Injectable({

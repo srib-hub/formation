@@ -16,7 +16,7 @@
       "tva": 20,
       "state": "Confirm",
       "typePresta": "Formation",
-      "client": "Atos",
+      "client": "M2i",
       "comment": "Comment pour Atos",
       "id": 4
     },
@@ -26,7 +26,7 @@
       "tva": "1",
       "state": "CANCEL",
       "typePresta": "MYTYPE",
-      "client": "remy",
+      "client": "nemesys",
       "comment": "et hop",
       "id": 5
     },
@@ -36,26 +36,28 @@
       "tva": "0.30",
       "state": "Confirm",
       "typePresta": "MYTYPE",
-      "client": "remy",
+      "client": "nemesys",
       "comment": "Yep",
       "id": 6
-    },
+    }
+  ],
+  "orders2": [
     {
-      "tjmHt": null,
-      "nbJours": 1,
-      "tva": null,
-      "state": "In Progress",
-      "typePresta": null,
-      "client": "azeerr",
-      "comment": null,
-      "id": 10
+      "tjmHt": "15612358",
+      "nbJours": "25",
+      "tva": "0.30",
+      "state": "Confirm",
+      "typePresta": "MYTYPE",
+      "client": "nemesys",
+      "comment": "Yep",
+      "id": 6
     }
   ],
   "clients": [
     {
       "state": "INACTIF",
       "name": "M2i",
-      "id": 2,
+      "id": 1,
       "ca": 120000,
       "comment": "un comment pour client modis"
     },

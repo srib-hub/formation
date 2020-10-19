@@ -15,7 +15,7 @@
       </td>
       <td>
         <app-icon-update routerLink="edit/{{order.id}}" ></app-icon-update>
-        <app-icon-delete (click)="deleteOrder(order.id)"></app-icon-delete>
+        <app-icon-delete (click)="openModale(order.id)"></app-icon-delete>
     </td>
     </tr>
   </app-table-dark>
@@ -43,3 +43,18 @@
   <p>Ceci est un texte dans un paragraphe</p>
 </app-text>
 
+<ul (click)="ajouterLi()" #maliste>
+  <li>Cliquer pour ajouter li</li>
+</ul>
+
+
+<ng-template #confirmDel let-modal>
+  <app-modale title="Confirmation de suppression" (dismissed)="dismissModale()">
+    <div class="modal-body">
+      Etes vous sûr ???
+    </div>
+    <div class="modal-footer">
+      <app-btn typeButton="button" (clicked)="deleteOrder(modaleValues)" label="Valider" [action]="true"></app-btn>
+    </div>
+  </app-modale>
+</ng-template>

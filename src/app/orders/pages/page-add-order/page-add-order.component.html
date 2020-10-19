@@ -1,1 +1,12 @@
-<app-form-order class="main-content" (submitted)="addOrder($event)"></app-form-order>
+<app-form-order class="main-content" (submitted)="openModale($event)"></app-form-order>
+
+<ng-template #confirmAdd let-modal>
+  <app-modale title="Confirmation d'ajout" (dismissed)="dismissModale()">
+    <div class="modal-body">
+      Etes vous sûr ???
+    </div>
+    <div class="modal-footer">
+      <app-btn typeButton="button" (clicked)="addOrder(modaleValues)" label="Valider" [action]="true"></app-btn>
+    </div>
+  </app-modale>
+</ng-template>
